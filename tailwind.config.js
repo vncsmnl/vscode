@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     backgroundImage: {
-      app: 'linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5)'
+      app: 'linear-gradient(to left, #f5f7fa, #c3cfe2)'
     },
     gridTemplateRows: {
       layout: '2rem 1fr 1.5rem',

@@ -52,7 +52,7 @@ export function Explorer() {
           <OpenFilesSubMenu />
         </SubMenu>
 
-        <SubMenu defaultOpen title="FALA-DEV">
+        <SubMenu defaultOpen title="OPTIONS">
           <Folder defaultOpen title="Visual Studio Code">
             {/* <File href="/vscode/general">
             <Code2 size={16} />

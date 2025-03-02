@@ -13,7 +13,7 @@ export default async function General() {
   const { content } = await getCodeBlockFromNotion(terminal_general)
 
   const highlighter = await shiki.getHighlighter({
-    theme: 'rose-pine-moon',
+    theme: 'dracula',
   })
 
   const code = highlighter.codeToHtml(content, { lang: 'md' })

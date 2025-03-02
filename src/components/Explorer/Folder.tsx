@@ -15,7 +15,7 @@ export function Folder({ title, children, defaultOpen = false }: FolderProps) {
 
   return (
     <Collapsible.Root open={isOpen} onOpenChange={setIsOpen}>
-      <Collapsible.Trigger className="flex items-center gap-2 px-2 py-1 w-full border border-transparent hover:bg-[#2a273f] hover:text-[#E0DEF2] focus:bg-[#2a273f] focus:border-[#363247] focus:text-[#E0DEF2]">
+      <Collapsible.Trigger className="flex items-center gap-2 px-2 py-1 w-full border border-transparent hover:bg-[#282a36] hover:text-[#E0DEF2] focus:bg-[#282a36] focus:border-[#363247] focus:text-[#E0DEF2]">
         {isOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
 
         <FolderIcon size={16} />

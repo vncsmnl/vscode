@@ -23,7 +23,7 @@ export function OpenFilesSubMenu() {
           <div
             key={index}
             data-active={isCurrentActive}
-            className="flex text-sm items-center gap-2 py-1 px-4 text-transparent hover:bg-[#2a273f] hover:text-[#E0DEF2] data-[active=true]:bg-[#2a273f] data-[active=true]:text-[#E0DEF2]"
+            className="flex text-sm items-center gap-2 py-1 px-4 text-transparent hover:bg-[#191a21] hover:text-[#E0DEF2] data-[active=true]:bg-[#282a36] data-[active=true]:text-[#E0DEF2]"
           >
             <div className="data-[active=true]:text-white">
               <CloseFileButton isActive={isCurrentActive} index={index} />

@@ -13,7 +13,7 @@ export default async function GamingSetup() {
   const { content } = await getCodeBlockFromNotion(setup_gaming)
 
   const highlighter = await shiki.getHighlighter({
-    theme: 'rose-pine-moon',
+    theme: 'dracula',
   })
 
   const code = highlighter.codeToHtml(content, { lang: 'md' })

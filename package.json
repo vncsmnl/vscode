@@ -10,29 +10,30 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "@notionhq/client": "^2.2.3",
-    "@radix-ui/react-collapsible": "^1.0.1",
-    "@radix-ui/react-dropdown-menu": "^2.0.2",
-    "@radix-ui/react-scroll-area": "^1.0.2",
+    "@notionhq/client": "^2.2.10",
+    "@radix-ui/react-collapsible": "^1.0.3",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-scroll-area": "^1.0.4",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "@vercel/edge-config": "^0.1.1",
+    "@vercel/edge-config": "^0.1.11",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "lucide-react": "^0.112.0",
     "next": "13.1.7-canary.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "shiki": "^0.14.0",
+    "shiki": "^0.14.3",
     "tailwind-scrollbar": "^2.1.0",
     "typescript": "4.9.5",
-    "zod": "^3.20.2",
-    "zod-fetch": "^0.1.0"
+    "zod": "^3.21.4",
+    "zod-fetch": "^0.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
-  }
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
+  },
+  "packageManager": "pnpm@8.11.0+sha512.9df87c16c98db27b4e051d787e67f2207ec47e809ccb07bf7b5ec4acdcd1613355839a38d0b900144923d6a7057700b74d2a0ccb1558beb241647a1206a9a7ab"
 }

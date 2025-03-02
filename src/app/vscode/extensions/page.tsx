@@ -5,6 +5,6 @@ export const metadata = {
 }
 
 export default async function Extensions() {
-  {/* @ts-expect-error Server Component */}
-  return <GistContent gistUrl="https://gist.githubusercontent.com/diego3g/6886b0928e422ba674cc67d6dac5f3e7/raw/bd30aa71c9e58bee6da786b90b8e44d6fce0dffd/extensions.json" />
+  {/* @ts-expect-error Server Component */ }
+  return <GistContent gistUrl="https://gist.githubusercontent.com/vncsmnl/80cd621c15854c98c7344097ed231c6f/raw/c1cfa85a92a85948fb7c6ee66348f050229de319/extensions.json" />
 }

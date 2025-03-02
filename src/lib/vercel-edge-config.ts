@@ -1,4 +1,4 @@
-import { get } from '@vercel/edge-config'
+import { createClient } from '@vercel/edge-config'
 import { z } from 'zod'
 
 const notionPagesIdStore = z.object({
@@ -8,8 +8,10 @@ const notionPagesIdStore = z.object({
   setup_gaming: z.string(),
 })
 
+const config = createClient(process.env.EDGE_CONFIG)
+
 export async function getNotionPagesId() {
-  const pagesId = await get('notion')
+  const pagesId = await config.get('notion')
 
   return notionPagesIdStore.parse(pagesId)
 }

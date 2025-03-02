@@ -5,6 +5,6 @@ export const metadata = {
 }
 
 export default async function Settings() {
-  {/* @ts-expect-error Server Component */}
-  return <GistContent gistUrl="https://gist.githubusercontent.com/diego3g/b1b189063d21b96d6144ca896755be64/raw/765a17e8c439d25b1866c1322437a6da2b9e4be8/settings.json" />
+  {/* @ts-expect-error Server Component */ }
+  return <GistContent gistUrl="https://gist.githubusercontent.com/vncsmnl/c194494f865b54f67c6b5f6a1f7cfc85/raw/eb4ec3e3b4567ce07b6d94036e079cd8326c8f3c/settings.json" />
 }
