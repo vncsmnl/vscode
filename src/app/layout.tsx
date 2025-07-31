@@ -13,14 +13,14 @@ import { OpenFilesProvider } from '@/hooks/useOpenFiles'
 
 export const metadata = {
   title: {
-    default: 'Vinícius Manoel',
-    template: '%s | Vinícius Manoel'
+    default: 'VS Code Settings',
+    template: '%s | VS Code Settings'
   },
   robots: {
     index: true,
     follow: true,
   },
-  description: "CTO at @Rocketseat. Passionate about education and changing people's lives through programming.",
+  description: "Passionate about education and changing people's lives through programming.",
 }
 
 export default function RootLayout({

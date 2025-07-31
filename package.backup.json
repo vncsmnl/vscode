@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upgrade:phase1": "echo '🔍 Testando build atual...' && pnpm build",
+    "upgrade:phase2": "echo '📦 Fase 2: Migrações críticas' && pnpm remove @next/font && pnpm add next@14.2.15 eslint-config-next@14.2.15",
+    "upgrade:phase3": "echo '📦 Fase 3: TypeScript' && pnpm add -D typescript@5.8.3 @types/node@24.1.0",
+    "upgrade:phase4": "echo '📦 Fase 4: UI Dependencies' && pnpm add lucide-react@latest @radix-ui/react-collapsible@latest @radix-ui/react-dropdown-menu@latest @radix-ui/react-scroll-area@latest",
+    "test:all": "pnpm build && pnpm start",
+    "backup": "git add . && git commit -m '📦 Backup before upgrade phase'"
   },
   "dependencies": {
     "@next/font": "13.1.6",
