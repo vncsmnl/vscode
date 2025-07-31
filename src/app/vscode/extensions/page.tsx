@@ -1,7 +1,7 @@
 import { GistContent } from '@/components/GistContent'
 
 export const metadata = {
-  title: 'VSCode Extensions',
+  title: 'Extensions',
 }
 
 export default async function Extensions() {

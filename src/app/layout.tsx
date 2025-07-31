@@ -13,14 +13,29 @@ import { OpenFilesProvider } from '@/hooks/useOpenFiles'
 
 export const metadata = {
   title: {
-    default: 'VS Code Settings',
-    template: '%s | VS Code Settings'
+    default: 'VS Code',
+    template: '%s | VS Code'
+  },
+  description: "Passionate about education and changing people's lives through programming.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/favicon.png' },
+    ],
   },
   robots: {
     index: true,
     follow: true,
   },
-  description: "Passionate about education and changing people's lives through programming.",
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
