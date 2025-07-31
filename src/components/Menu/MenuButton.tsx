@@ -1,7 +1,7 @@
-import type { Icon } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 interface MenuButtonProps {
-  icon: Icon
+  icon: LucideIcon
   isActive?: boolean
 }
 
