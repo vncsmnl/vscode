@@ -37,12 +37,12 @@ jobs:
         run: pnpm build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIST_VSCODE_EXTENSIONS_ID: ${{ vars.GIST_VSCODE_EXTENSIONS_ID || 'fallback-gist-id' }}
-          GIST_VSCODE_SETTINGS_ID: ${{ vars.GIST_VSCODE_SETTINGS_ID || 'fallback-gist-id' }}
-          GIST_TERMINAL_GENERAL_ID: ${{ vars.GIST_TERMINAL_GENERAL_ID || 'fallback-gist-id' }}
-          GIST_TERMINAL_FISH_ID: ${{ vars.GIST_TERMINAL_FISH_ID || 'fallback-gist-id' }}
-          GIST_GAMING_SETUP_ID: ${{ vars.GIST_GAMING_SETUP_ID || 'fallback-gist-id' }}
-          GIST_DEV_SETUP_ID: ${{ vars.GIST_DEV_SETUP_ID || 'fallback-gist-id' }}
+          GIST_VSCODE_EXTENSIONS_ID: ${{ vars.GIST_VSCODE_EXTENSIONS_ID != '' && vars.GIST_VSCODE_EXTENSIONS_ID || 'fallback-gist-id' }}
+          GIST_VSCODE_SETTINGS_ID: ${{ vars.GIST_VSCODE_SETTINGS_ID != '' && vars.GIST_VSCODE_SETTINGS_ID || 'fallback-gist-id' }}
+          GIST_TERMINAL_GENERAL_ID: ${{ vars.GIST_TERMINAL_GENERAL_ID != '' && vars.GIST_TERMINAL_GENERAL_ID || 'fallback-gist-id' }}
+          GIST_TERMINAL_FISH_ID: ${{ vars.GIST_TERMINAL_FISH_ID != '' && vars.GIST_TERMINAL_FISH_ID || 'fallback-gist-id' }}
+          GIST_GAMING_SETUP_ID: ${{ vars.GIST_GAMING_SETUP_ID != '' && vars.GIST_GAMING_SETUP_ID || 'fallback-gist-id' }}
+          GIST_DEV_SETUP_ID: ${{ vars.GIST_DEV_SETUP_ID != '' && vars.GIST_DEV_SETUP_ID || 'fallback-gist-id' }}
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
