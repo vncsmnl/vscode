@@ -9,10 +9,11 @@ const gistResponseSchema = z.object({
 
 export async function getCodeBlockFromGist(gistId: string): Promise<{ content: string }> {
     // Retorna conteúdo fallback se não há token do GitHub
-    if (!process.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN === 'test') {
-        console.warn('⚠️ GITHUB_TOKEN not configured, using fallback content')
+    // Usa GIST_TOKEN para evitar conflito com GITHUB_TOKEN do GitHub Actions
+    if (!process.env.GIST_TOKEN || process.env.GIST_TOKEN === 'test') {
+        console.warn('⚠️ GIST_TOKEN not configured, using fallback content')
         return {
-            content: `# Fallback Content\n\nConfigure GITHUB_TOKEN environment variable to fetch real content.\n\nGist ID: ${gistId}`
+            content: `# Fallback Content\n\nConfigure GIST_TOKEN environment variable to fetch real content.\n\nGist ID: ${gistId}`
         }
     }
 
@@ -27,10 +28,11 @@ export async function getCodeBlockFromGist(gistId: string): Promise<{ content: s
     try {
         const response = await fetch(`https://api.github.com/gists/${gistId}`, {
             headers: {
-                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                'Authorization': `Bearer ${process.env.GIST_TOKEN}`,
                 'Accept': 'application/vnd.github.v3+json',
                 'User-Agent': 'fala-dev-app'
-            }
+            },
+            next: { revalidate: 3600 } // Cache for 1 hour to reduce API calls
         })
 
         if (!response.ok) {
